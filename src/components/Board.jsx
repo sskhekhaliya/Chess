@@ -6,7 +6,7 @@ import Bishop from "../assets/bishop.svg";
 import Queen from "../assets/queen.svg";
 import King from "../assets/king.svg";
 import Pawn from "../assets/pawn.svg";
-import Play from "./Play";
+import {Play, Undo} from "./Play";
 import { RotateRight, RotateLeft, HideShow } from "./controller";
 
 export default function Board(){
@@ -70,12 +70,9 @@ export default function Board(){
         <div className="controllers">
             <div id="controls" className="controls">
                 <div>
-                <h3>Rotate</h3>
+                <h4 style={{"margin": 0}}>Undo</h4>
                 <div className="controller-btns">
-                    <span className="material-symbols-rounded left-btn" onClick={RotateLeft}>
-                        refresh
-                    </span>
-                    <span className="material-symbols-rounded right-btn" onClick={RotateRight}>
+                    <span className="material-symbols-rounded left-btn" onClick={Undo}>
                         refresh
                     </span>
                 </div>

@@ -19,6 +19,7 @@ This Chess game provides a digital platform to play the classic game of Chess. I
 - **Checkmate Detection**: The game detects and announces checkmate, ensuring a fair and competitive experience.
 - **Responsive Design**: Play Chess seamlessly across various devices, including desktops, tablets, and mobile phones.
 - **Interactive Board**: Click on pieces to select and move them, and see legal moves highlighted on the board.
+- **Undo Move**: Undo your last move if needed, allowing you to correct mistakes during gameplay.
 - **Responsive Design**: Enjoy a seamless gaming experience across different screen sizes, ensuring accessibility for all players.
 
 ## Demo

@@ -51,7 +51,6 @@ function clearSelection() {
 }
 
 
-
 export {RotateRight, RotateLeft, HideShow};
 
 
