@@ -1,4 +1,3 @@
-
 import Checkmate from "./Checkmate";
 import ChessMoves from "./moves/ChessMoves";
 import WinAudio from "../assets/sounds/win.wav"
@@ -30,24 +29,27 @@ export default function Play(e) {
         localStorage.setItem("chessPiece", id);
 
         const piece = click.children[0].children[1].className;
-
-        Array.from(allCols).forEach(element => {
-          if (element.style.backgroundColor !== chekmateColor) {
-            element.style.backgroundColor = "";
-          }
-          if (element.id === id) {
-            element.style.backgroundColor = positionColor;
-          }
-        });
+  
+        piecePositions(allCols, id);
         ChessMoves(row, col, piece, positionColor);
+      } else {
+        piecePositions(allCols, id);
       }
     }
-
   } else {
-
     piecesPattern(e);
   }
+}
 
+function piecePositions(allCols, id){
+  Array.from(allCols).forEach(element => {
+    if (element.style.backgroundColor !== chekmateColor) {
+      element.style.backgroundColor = "";
+    }
+    if (element.id === id) {
+      element.style.backgroundColor = positionColor;
+    }
+  });
 }
 
 function piecesPattern(e) {
@@ -69,7 +71,7 @@ function piecesPattern(e) {
       blackContainer.appendChild(click.parentElement);
     }
 
-    //Winning Cheking
+    //Winning Checking
     let winingAudio = new Audio(WinAudio);
     if (click.nextSibling.className === "black-player king") {
       winner.children[0].innerText = "White WIN!";
