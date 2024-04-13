@@ -24,7 +24,6 @@ function RotateLeft(){
 function HideShow(){
     const el = document.getElementById("controls");
     const btn = document.getElementById("controls-visible-btn");
-    console.log(el.style.display);
     if(el.style.display !== "none"){
         el.style.display = "none";
         btn.children[0].innerText = "visibility";

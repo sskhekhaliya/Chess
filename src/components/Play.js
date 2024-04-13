@@ -150,12 +150,11 @@ function Undo() {
   // Move the last moved piece back to its old position
     old_position.appendChild(currentPiece);
 
-    if (existingHistory.length != 0 && existingHistory[existingHistory.length - 1][1] === "") {
+    if (existingHistory.length !== 0 && existingHistory[existingHistory.length - 1][1] === "") {
       const lastOutPieces = JSON.parse(localStorage.getItem('out'));
       const lastOutPiece = document.querySelector("." + lastOutPieces[lastOutPieces.length - 1]);
-      const lastOutPiecePosition = document.getElementById(existingHistory[existingHistory.length - 2][1]);
-      console.log(lastOutPiecePosition);
-      lastOutPiecePosition.appendChild(lastOutPiece);
+      const lastOutPieceId = document.getElementById(lastHistory[1]);
+      lastOutPieceId.appendChild(lastOutPiece);
       lastOutPiece.classList.remove(lastOutPieces[lastOutPieces.length - 1]);
       existingHistory.pop();
       lastOutPieces.pop();
